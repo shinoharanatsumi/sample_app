@@ -30,7 +30,7 @@ class ListsController < ApplicationController
     list.update(list_params)
     redirect_to list_path(list.id)
   end
-    
+
   def destroy
     list = List.find(params[:id])
     list.destroy
@@ -40,7 +40,7 @@ class ListsController < ApplicationController
   private
 
   def list_params
-    params.require(:list).permit(:title, :body, :ima)
+    params.require(:list).permit(:title, :body, :image)
   end
 
 end
